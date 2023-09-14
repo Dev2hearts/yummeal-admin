@@ -133,7 +133,7 @@ const AdminItemEdit = () => {
       try {
         const img = await imgUpload(productRef.current, file);
         console.log("받아오는 값", img);
-        editor.insertEmbed(range.index, "image", `http://192.168.0.144:5001/img/webeditor/${productRef.current}/${img.img}`);
+        editor.insertEmbed(range.index, "image", `/img/webeditor/${productRef.current}/${img.img}`);
         editor.setSelection(range.index + 1);
       } catch (error) {
         console.log(error);

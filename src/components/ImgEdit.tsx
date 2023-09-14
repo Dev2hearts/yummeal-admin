@@ -61,11 +61,7 @@ const ImgEdit = ({
   };
   useEffect(() => {
     if (typeof imgArr[idx] === "string") {
-      setImgPreview(
-        `http://192.168.0.144:5001/img/product/${product}/${String(
-          imgArr[idx],
-        )}`,
-      );
+      setImgPreview(`/img/product/${product}/${String(imgArr[idx])}`);
     }
   }, [imgArr]);
   return (
